@@ -1,6 +1,4 @@
 import pandas as pd
-
-# Create a simple menu database
 menu_data = {
     'Item': ['Pizza', 'Burger', 'Salad', 'Pasta', 'Soda'],
     'Price': [10, 5, 7, 9, 2],
@@ -8,15 +6,11 @@ menu_data = {
 }
 
 menu_df = pd.DataFrame(menu_data)
-
-# Simple ordering system
 orders = []
-
 def show_menu():
     print("\n--- MENU ---")
     print(menu_df[['Item', 'Price']].to_string(index=False))
     print("------------")
-
 def take_order():
     show_menu()
     print("\nType the item name exactly as shown to order (or 'done' to finish)")
@@ -46,8 +40,6 @@ def show_receipt():
         total += item['Price']
     print(f"\nTOTAL: ${total}")
     print("-----------------")
-
-# Main program
 print("Welcome to Simple Food Ordering System!")
 while True:
     print("\nOptions:")
